@@ -1,5 +1,5 @@
 /*!
-*  ui-leaflet 3.0.0 2016-12-27
+*  ui-leaflet 3.0.0 2017-04-17
 *  ui-leaflet - An AngularJS directive to easily interact with Leaflet maps
 *  git: https://github.com/angular-ui/ui-leaflet
 */
@@ -1561,6 +1561,14 @@ angular.module('ui-leaflet').factory('leafletLayerHelpers', ["$rootScope", "$q",
             mustHaveUrl: true,
             createLayer: function createLayer(params) {
                 return L.tileLayer.iip(params.url, params.options);
+            }
+        },
+        googlemutant: {
+            mustHaveUrl: false,
+            createLayer: function createLayer(params) {
+                var options = params.options || {};
+                options.type = params.type || 'satellite';
+                return new L.GridLayer.GoogleMutant(options);
             }
         },
 
