@@ -210,6 +210,14 @@ angular.module('ui-leaflet')
                 return L.tileLayer.iip(params.url, params.options);
             }
         },
+        googlemutant: {
+            mustHaveUrl: false,
+            createLayer: function(params) {
+                var options = params.options || {};
+                options.type = params.type || 'satellite';
+                return new L.GridLayer.GoogleMutant(options);
+            }
+        },
 
         // This "custom" type is used to accept every layer that user want to define himself.
         // We can wrap these custom layers like heatmap or yandex, but it means a lot of work/code to wrap the world,
