@@ -69,7 +69,7 @@
   "main": "dist/ui-leaflet.js",
   "dependencies": {
     "angular": "1.x",
-    "angular-simple-logger": "~0.1.4",
-    "leaflet": "0.7.x"
+    "angular-simple-logger": "git+https://github.com/Reeska/angular-simple-logger.git#master",
+    "leaflet": "1.x"
   }
 }
