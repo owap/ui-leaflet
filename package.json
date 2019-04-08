@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "angular": "1.x",
-    "angular-simple-logger": "0.1.x",
-    "leaflet": "1.0.0"
+    "angular-simple-logger": "git+https://github.com/Reeska/angular-simple-logger.git#master",
+    "leaflet": "1.x"
   }
 }
